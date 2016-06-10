@@ -10,21 +10,15 @@ $main-color: #00d89f
 
 
 
-@font-face
-  font-family: "AvenirNextW1G-Demi"
-  src: url("../fonts/AvenirNextW1G-Demi.eot")
-  src: url("../fonts/AvenirNextW1G-Demi.eot?#iefix")format("embedded-opentype"),url("../fonts/AvenirNextW1G-Demi.otf") format("otf"), url("../fonts/AvenirNextW1G-Demi.svg") format("svg"),url("../fonts/AvenirNextW1G-Demi.woff") format("woff"),url("../fonts/AvenirNextW1G-Demi.ttf") format("truetype")
-  font-style: normal
-  font-weight: normal
-
 
 
 body
-  font-family: "BorgiaPro-Regular", Arial, sans-serif
+  font-family: 'Open Sans', sans-serif
   padding: 0
   margin: 0
   line-height: 1em
   font-size: 16px
+  font-weight: 400
 
   &.no-scroll
     overflow: hidden!important
@@ -37,3 +31,48 @@ body
 *
   box-sizing: border-box
 
+.content
+  width: 1170px
+  margin: auto
+
+
+
+.list_portfolio
+  margin: 0 -15px 100px
+  .row
+    &:nth-child(2n+1)
+      .item
+        &:first-child
+          height: 570px
+
+    &:nth-child(2n)
+      .item
+        &:first-child
+          height: 570px
+          float: right
+
+
+
+  .item
+    display: inline-block
+    vertical-align: top
+    width: 570px
+    height: 270px
+    margin: 0 15px 30px
+    overflow: hidden
+    float: left
+
+
+
+    .img-holder
+      height: 100%
+      overflow: hidden
+      img
+        height: 100%
+        max-width: inherit
+    a
+      display: block
+      height: 100%
+
+    .name
+      display: none
