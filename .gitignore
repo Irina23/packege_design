@@ -1,4 +1,6 @@
 .idea/
 bower_components/
 dist/js/
+dist/fonts/
+dist/img/
 node_modules/
