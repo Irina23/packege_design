@@ -445,7 +445,23 @@ footer
         line-height: 1em
         text-transform: uppercase
         margin-bottom: 20px
+      .ya-share2__container_size_m .ya-share2__icon
+        width: 30px
+        height: 30px
 
+      .ya-share2__badge
+        border-radius: 30px
+      .ya-share2__container_size_m .ya-share2__item
+        margin: 0 20px 0 0
+        &:last-child
+          margin: auto
+      .ya-share2__item_service_facebook .ya-share2__badge,
+      .ya-share2__item_service_pinterest .ya-share2__badge
+        background: #afb0b0
+        transition: all 0.35s
+        &:hover
+          transition: all 0.35s
+          background: $main-color
 
     .block_text
       width: 660px

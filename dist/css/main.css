@@ -372,6 +372,25 @@ footer {
       line-height: 1em;
       text-transform: uppercase;
       margin-bottom: 20px; }
+    .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__icon {
+      width: 30px;
+      height: 30px; }
+    .portfolio_page .portfolio-info .share .ya-share2__badge {
+      border-radius: 30px; }
+    .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__item {
+      margin: 0 20px 0 0; }
+      .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__item:last-child {
+        margin: auto; }
+    .portfolio_page .portfolio-info .share .ya-share2__item_service_facebook .ya-share2__badge,
+    .portfolio_page .portfolio-info .share .ya-share2__item_service_pinterest .ya-share2__badge {
+      background: #afb0b0;
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s; }
+      .portfolio_page .portfolio-info .share .ya-share2__item_service_facebook .ya-share2__badge:hover,
+      .portfolio_page .portfolio-info .share .ya-share2__item_service_pinterest .ya-share2__badge:hover {
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+        background: #36d5c4; }
   .portfolio_page .portfolio-info .block_text {
     width: 660px;
     float: left; }
