@@ -9,30 +9,34 @@ html(lang="ru")
 
             include ./header.jade
             .content.cf
-                .contact
+                .wrap
                     .block-left
-                        h3 Art-Director
-                        p Name: Kseniya
-                        p E-mail:
+                        ul
+                            li
+                                h3 Art-Director
+                                p Name: Kseniya
+                                p E-mail:&nbsp;
 
-                            a(href="mailto:kse@logovo.com.ua") kse@logovo.com.ua
-                        p Phone:
-                            a(href="tel:+38(068)1295629") +38(068)1295629
-
-                        h3 Creative Director
-                        p Name: Vitaliy
-                        p E-mail:
-                            a(href="mailto:milu@logovo.com.ua") milu@logovo.com.ua
-                        p Phone:
-                            a(href="tel:+38(068)1980088") +38(068)1980088
+                                    a(href="mailto:kse@logovo.com.ua") kse@logovo.com.ua
+                                p Phone:&nbsp;
+                                    a(href="tel:+38(068)1295629") +38(068)1295629
+                            li
+                                h3 Creative Director
+                                p Name: Vitaliy
+                                p E-mail:&nbsp;
+                                    a(href="mailto:milu@logovo.com.ua") milu@logovo.com.ua
+                                p Phone:&nbsp;
+                                    a(href="tel:+38(068)1980088") +38(068)1980088
 
                     form.contact
                         h3 Write to us
                         div
-                            input(type="text", placeholder="Name:")
+                            input(type="text", placeholder="Name:", data-validate="name")
                         div
-                            input(type="text", placeholder="Mail:")
+                            input(type="text", placeholder="Mail:" data-validate="email")
                         div
+                            textarea(placeholder="Message:", data-validate="empty")
+                        .btn.submit SEND
 
 
 

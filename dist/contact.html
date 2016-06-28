@@ -72,26 +72,35 @@
         </div>
       </header>
       <div class="content cf">
-        <div class="contact">
+        <div class="wrap">
           <div class="block-left">
-            <h3>Art-Director</h3>
-            <p>Name: Kseniya</p>
-            <p>E-mail:<a href="mailto:kse@logovo.com.ua">kse@logovo.com.ua</a></p>
-            <p>Phone:<a href="tel:+38(068)1295629">+38(068)1295629</a></p>
-            <h3>Creative Director</h3>
-            <p>Name: Vitaliy</p>
-            <p>E-mail:<a href="mailto:milu@logovo.com.ua">milu@logovo.com.ua</a></p>
-            <p>Phone:<a href="tel:+38(068)1980088">+38(068)1980088</a></p>
+            <ul>
+              <li>
+                <h3>Art-Director</h3>
+                <p>Name: Kseniya</p>
+                <p>E-mail:&nbsp;<a href="mailto:kse@logovo.com.ua">kse@logovo.com.ua</a></p>
+                <p>Phone:&nbsp;<a href="tel:+38(068)1295629">+38(068)1295629</a></p>
+              </li>
+              <li>
+                <h3>Creative Director</h3>
+                <p>Name: Vitaliy</p>
+                <p>E-mail:&nbsp;<a href="mailto:milu@logovo.com.ua">milu@logovo.com.ua</a></p>
+                <p>Phone:&nbsp;<a href="tel:+38(068)1980088">+38(068)1980088</a></p>
+              </li>
+            </ul>
           </div>
           <form class="contact">
             <h3>Write to us</h3>
             <div>
-              <input type="text" placeholder="Name:">
+              <input type="text" placeholder="Name:" data-validate="name">
             </div>
             <div>
-              <input type="text" placeholder="Mail:">
+              <input type="text" placeholder="Mail:" data-validate="email">
             </div>
-            <div></div>
+            <div>
+              <textarea placeholder="Message:" data-validate="empty"></textarea>
+            </div>
+            <div class="btn submit">SEND</div>
           </form>
         </div>
       </div>
