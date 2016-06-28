@@ -75,8 +75,22 @@ jQuery(document).ready(function() {
         $('.active-lang').text(text);
         //console.log(text);
     });
- 
 
+
+    //form validate
+    jQuery("form").validate({
+
+        rules:{
+            name:{
+                required: true,
+                minlength: 2
+            },
+            email:{
+                required: true,
+                email: true
+            }
+        }
+    });
 
 
 });
