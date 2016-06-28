@@ -51,22 +51,24 @@ body
   width: 1170px
   margin: auto
   clear: both
+
+
+.home
   h1
     text-transform: uppercase
     float: right
     line-height: 35px
-    margin-bottom: 80px
+    margin-top: -115px
     //font-family: "OpenSans-Bold", sans-serif
-
+    clear: both
     color: #3d3e3c
     font-size: 18px
     font-weight: 600
-    //line-height: 48px
-
-
+//line-height: 48px
 
 .list_portfolio
   margin: 0 -15px 100px
+  clear: both
   .row
     &:nth-child(2n+1)
       .item
@@ -166,8 +168,9 @@ body
       background: $main-color
 
 .filter
-  margin-bottom: 80px
+  //margin-bottom: 80px
   float: left
+  margin-top: 30px
   h3
     color: #3d3e3c
     //font-family: "OpenSans-Semibold", sans-serif
@@ -211,7 +214,7 @@ body
 
 
 header
-  padding: 40px 0 30px
+  padding: 40px 0 80px
   .logo
     width: 700px
     //margin-bottom: 30px
@@ -219,10 +222,13 @@ header
     a
       display: block
 
-
-  .lang-block
+  .block-right
     float: right
-    margin-top: 16px
+    margin-top: 25px
+  .lang-block
+    display: inline-block
+    vertical-align: middle
+    position: relative
     .active-lang
       //font-family: "OpenSans-Semibold", sans-serif
       font-size: 14px
@@ -230,15 +236,52 @@ header
       line-height: 14px
       text-transform: uppercase
       color: $main-color
+      position: relative
+      padding-right: 15px
+      cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: 0
+        margin-left: -3px
+        margin-top: -2px
+        width: 0
+        height: 0
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-top: 4px solid $main-color
+
 
     .lang-list
       display: none
+      position: absolute
+      top: 14px
+      left: 0
+      width: 100%
+
+      li
+        margin-top: 5px
+        &.active
+          display: none
+        a
+          font-size: 14px
+          font-weight: 500
+          line-height: 14px
+          text-transform: uppercase
+          color: #000
+          transition: all 0.35s
+          &:hover
+            transition: all 0.35s
+            color: $main-color
+            text-decoration: none
 
 
 
   .menu-block
-    margin-top: 14px
-    float: right
+    //margin-top: 25px
+    display: inline-block
+    vertical-align: middle
     &.mobile
       display: none
 
@@ -380,3 +423,46 @@ footer
 
 
 
+.portfolio_page
+  .portfolio
+    margin-bottom: 70px
+  .img-holder
+    width: 100%
+    margin-bottom: 30px
+
+  .portfolio-info
+
+    background:  #f6f5f4
+    margin-bottom: 30px
+    padding: 70px 65px
+    .share
+      float: right
+      h3
+        font-family: "OpenSans-Semibold", sans-serif
+        color:  #302f2f
+        font-size: 18px
+        font-weight: 400
+        line-height: 1em
+        text-transform: uppercase
+        margin-bottom: 20px
+
+
+    .block_text
+      width: 660px
+      float: left
+      h1
+        font-family: "OpenSans-Semibold", sans-serif
+        color:  #302f2f
+        font-size: 18px
+        font-weight: 500
+        line-height: 1em
+        text-align: left
+        text-transform: uppercase
+        margin-bottom: 20px
+      p
+
+        color:  #5a5959
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+        text-align: left

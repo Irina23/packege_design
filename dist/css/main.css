@@ -44,17 +44,20 @@ body {
   width: 1170px;
   margin: auto;
   clear: both; }
-  .content h1 {
-    text-transform: uppercase;
-    float: right;
-    line-height: 35px;
-    margin-bottom: 80px;
-    color: #3d3e3c;
-    font-size: 18px;
-    font-weight: 600; }
+
+.home h1 {
+  text-transform: uppercase;
+  float: right;
+  line-height: 35px;
+  margin-top: -115px;
+  clear: both;
+  color: #3d3e3c;
+  font-size: 18px;
+  font-weight: 600; }
 
 .list_portfolio {
-  margin: 0 -15px 100px; }
+  margin: 0 -15px 100px;
+  clear: both; }
   .list_portfolio .row:nth-child(2n+1) .item:first-child {
     height: 570px; }
   .list_portfolio .row:nth-child(2n) .item {
@@ -129,8 +132,8 @@ body {
       background: #36d5c4; }
 
 .filter {
-  margin-bottom: 80px;
-  float: left; }
+  float: left;
+  margin-top: 30px; }
   .filter h3 {
     color: #3d3e3c;
     font-size: 30px;
@@ -167,26 +170,66 @@ body {
         transition: all 0.35s; }
 
 header {
-  padding: 40px 0 30px; }
+  padding: 40px 0 80px; }
   header .logo {
     width: 700px;
     float: left; }
     header .logo a {
       display: block; }
-  header .lang-block {
+  header .block-right {
     float: right;
-    margin-top: 16px; }
+    margin-top: 25px; }
+  header .lang-block {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative; }
     header .lang-block .active-lang {
       font-size: 14px;
       font-weight: 500;
       line-height: 14px;
       text-transform: uppercase;
-      color: #36d5c4; }
+      color: #36d5c4;
+      position: relative;
+      padding-right: 15px;
+      cursor: pointer; }
+      header .lang-block .active-lang:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-left: -3px;
+        margin-top: -2px;
+        width: 0;
+        height: 0;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 4px solid #36d5c4; }
     header .lang-block .lang-list {
-      display: none; }
+      display: none;
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 100%; }
+      header .lang-block .lang-list li {
+        margin-top: 5px; }
+        header .lang-block .lang-list li.active {
+          display: none; }
+        header .lang-block .lang-list li a {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 14px;
+          text-transform: uppercase;
+          color: #000;
+          -webkit-transition: all 0.35s;
+          transition: all 0.35s; }
+          header .lang-block .lang-list li a:hover {
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+            color: #36d5c4;
+            text-decoration: none; }
   header .menu-block {
-    margin-top: 14px;
-    float: right; }
+    display: inline-block;
+    vertical-align: middle; }
     header .menu-block.mobile {
       display: none; }
     header .menu-block .nav {
@@ -307,3 +350,43 @@ footer {
     line-height: 1em;
     margin-top: 30px;
     text-align: left; }
+
+.portfolio_page .portfolio {
+  margin-bottom: 70px; }
+
+.portfolio_page .img-holder {
+  width: 100%;
+  margin-bottom: 30px; }
+
+.portfolio_page .portfolio-info {
+  background: #f6f5f4;
+  margin-bottom: 30px;
+  padding: 70px 65px; }
+  .portfolio_page .portfolio-info .share {
+    float: right; }
+    .portfolio_page .portfolio-info .share h3 {
+      font-family: "OpenSans-Semibold", sans-serif;
+      color: #302f2f;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1em;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+  .portfolio_page .portfolio-info .block_text {
+    width: 660px;
+    float: left; }
+    .portfolio_page .portfolio-info .block_text h1 {
+      font-family: "OpenSans-Semibold", sans-serif;
+      color: #302f2f;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1em;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .portfolio_page .portfolio-info .block_text p {
+      color: #5a5959;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left; }

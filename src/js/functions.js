@@ -36,7 +36,45 @@ jQuery(document).ready(function() {
             }
         });
     });
-    
+
+
+
+    //filter portfolio
+    /*jQuery(".list_filter").on('click','li',function(){
+        var nav_active = jQuery(this);
+
+        jQuery('.list_filter li').each(function(){
+            jQuery(this).removeClass("active");
+        });
+        jQuery(nav_active).addClass("active");
+
+
+        var customType = jQuery(this).attr('data-cat');
+
+        if(customType==="all") {
+            jQuery('.list_portfolio .item').show();
+        }else{
+            jQuery('.list_portfolio .item').each(function(){
+                if(jQuery(this).attr('data-cat').indexOf(customType) < 0) jQuery(this).hide(); else jQuery(this).show();
+            });
+        }
+
+
+    });*/
+
+
+    //lang
+    $(".active-lang").on('click',function(){
+        $(this).next('.lang-list').slideToggle();
+    });
+    $(".lang-list").on('click','a',function(){
+        var $this = $(this);
+        var text = $this.html();
+        $('.lang-list').slideUp();
+        $this.closest('li').addClass('active').siblings().removeClass('active');
+        $('.active-lang').text(text);
+        //console.log(text);
+    });
  
 
 

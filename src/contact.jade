@@ -1,0 +1,44 @@
+doctype html
+html(lang="ru")
+    include ./head.jade
+
+
+    body
+        .page_wrapper.contact_page
+
+
+            include ./header.jade
+            .content.cf
+                .contact
+                    .block-left
+                        h3 Art-Director
+                        p Name: Kseniya
+                        p E-mail:
+
+                            a(href="mailto:kse@logovo.com.ua") kse@logovo.com.ua
+                        p Phone:
+                            a(href="tel:+38(068)1295629") +38(068)1295629
+
+                        h3 Creative Director
+                        p Name: Vitaliy
+                        p E-mail:
+                            a(href="mailto:milu@logovo.com.ua") milu@logovo.com.ua
+                        p Phone:
+                            a(href="tel:+38(068)1980088") +38(068)1980088
+
+                    form.contact
+                        h3 Write to us
+                        div
+                            input(type="text", placeholder="Name:")
+                        div
+                            input(type="text", placeholder="Mail:")
+                        div
+
+
+
+
+
+            include ./footer.jade
+
+
+
