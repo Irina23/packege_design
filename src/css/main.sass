@@ -356,7 +356,7 @@ footer
       color:  #3d3e3c
       font-size: 14px
       font-weight: 500
-      line-height: 28px
+      line-height: 23px
       text-align: left
       display: inline-block
       vertical-align: middle
@@ -407,7 +407,7 @@ footer
       margin-right: 50px
       color: #3d3e3c
       font-size: 14px
-      line-height: 1em
+      line-height: 23px
       text-transform: uppercase
       font-weight: 500
       &:last-child
@@ -419,7 +419,7 @@ footer
 
         color: #3d3e3c
         font-size: 14px
-        line-height: 1em
+        line-height: 21px
         //text-transform: uppercase
         margin-bottom: 20px
         transition: all 0.35s
@@ -639,9 +639,91 @@ footer
 
 
 
-@media screen and (max-width: 1199px)
-  .content
+@media screen and (max-width: 1230px)
+  .content, .about_page .wrap
     width: 940px
+  .wrap
+    min-height: calc(100vh - 411px)
+
+  header
+    .logo
+      width: 500px
+    .block-right
+      margin-top: 14px
+
+
+  .filter
+    h3
+      font-size: 24px
+      margin-right: 55px
+    .list_filter li
+      margin-right: 25px
+
+
+  footer
+    .logo
+      margin-right: 40px
+    .item_contact li
+      margin-right: 25px
+
+    .social
+      h3
+        margin-right: 20px
+      li
+        margin: 0 5px
 
 
 
+  .block_portfolio
+    .list_portfolio
+      margin: 0
+      .item:not(.hidden)
+        width: 293px
+        margin: 0 10px 20px
+        height: 275px
+        .name .name-center
+          font-size: 45px
+        &:nth-of-type(9n+4), &:nth-of-type(9n+5), &:nth-of-type(9n+6)
+          height: 275px
+
+        &:nth-of-type(9n+1), &:nth-of-type(9n+7)
+          width: 607px
+
+
+
+
+@media screen and (max-width: 959px)
+  .content, .about_page .wrap
+    width: 100%
+    box-sizing: border-box
+    padding: 0 30px
+  .block_portfolio .list_portfolio
+    margin: 0
+
+    .item:not(.hidden)
+      width: calc(50% - 20px)!important
+      height: 270px!important
+
+
+
+  footer
+    padding: 50px auto
+    .content
+      > div, > ul
+        display: block
+        margin: 0 auto 30px
+        text-align: center
+        float: none!important
+        &:last-child
+          margin-bottom: 0
+
+
+      .item_contact li
+        display: block
+        margin: 0 auto 10px
+
+      .social
+        h3
+          display: block
+          margin: 0 auto 10px
+          text-align: center
