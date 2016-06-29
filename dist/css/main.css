@@ -502,3 +502,33 @@ footer {
       background: #36d5c4;
       border-color: #36d5c4;
       color: #fff; }
+
+.about_page .bg_about {
+  height: 305px; }
+
+.about_page .wrap {
+  width: 970px;
+  margin: -90px auto 0;
+  box-sizing: border-box;
+  padding: 55px 100px 100px;
+  background: #fff; }
+  .about_page .wrap h1 {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px; }
+  .about_page .wrap p {
+    color: #5c5b5b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px; }
+  .about_page .wrap .img-holder {
+    margin-top: 65px;
+    width: 100%; }
+
+@media screen and (max-width: 1199px) {
+  .content {
+    width: 940px; } }
