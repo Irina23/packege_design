@@ -8,7 +8,13 @@ $main-color: #36d5c4
   display: none !important
   opacity: 0 !important
 
-
+@keyframes filterIn
+  from
+    opacity: 0
+    transform: scale(0)
+  to
+    opacity: 1
+    transform: scale(1)
 
 @font-face
   font-family: "OpenSans-Bold"
@@ -101,9 +107,15 @@ body
             float: right
 
 
-    .item:not(.hidden)
+    .item
       //display: inline-block
       //vertical-align: top
+
+      animation-name: filterIn
+      animation-duration: .6s
+      animation-iteration-count: 1
+      animation-fill-mode: forward
+      animation-direction: normal
 
       width: 370px
       height: 270px
@@ -113,12 +125,12 @@ body
       position: relative
       //display: none
 
-      &:nth-of-type(9n+1)
+      &:nth-child(9n+1)
         width: 770px
         height: 570px
-      &:nth-of-type(9n+4),&:nth-of-type(9n+5),&:nth-of-type(9n+6)
+      &:nth-child(9n+4),&:nth-child(9n+5),&:nth-child(9n+6)
         height: 370px
-      &:nth-of-type(9n+7)
+      &:nth-child(9n+7)
         width: 770px
         height: 570px
         float: right
@@ -150,19 +162,19 @@ body
         transition: opacity 0.35s
         display: table
         //&:after
-          width: calc(100% - 60px)
-          height: calc(100% - 60px)
-          margin: 30px
-          border: 5px solid #fff
-          content: ""
-          position: absolute
-          top: 0
-          left: 0
-          box-sizing: border-box
+          // width: calc(100% - 60px)
+          // height: calc(100% - 60px)
+          // margin: 30px
+          // border: 5px solid #fff
+          // content: ""
+          // position: absolute
+          // top: 0
+          // left: 0
+          // box-sizing: border-box
 
 
 
-        .name-center
+        &-center
           display: table-cell
           vertical-align: middle
           text-align: center

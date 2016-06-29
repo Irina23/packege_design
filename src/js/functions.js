@@ -55,25 +55,43 @@ jQuery(document).ready(function() {
 
 
     //filter portfolio
-    jQuery(".home .list_filter").on('click','li',function(){
-        var nav_active = jQuery(this);
+    jQuery('.list_portfolio').each(function () {
 
-        jQuery('.list_filter li').each(function(){
-            jQuery(this).removeClass("active");
-        });
-        jQuery(nav_active).addClass("active");
+        var $container = $(this),
+            elements = [];
+        $container.find('.item').each(function () {
+            elements.push(this);
+        })
 
+        // console.log(elements)
 
-        var customType = jQuery(this).attr('data-cat');
+        jQuery(".home .list_filter").on('click','li',function(){
+            var nav_active = jQuery(this);
+            if (nav_active.hasClass('active')) return;
 
-        if(customType==="all") {
-            jQuery('.list_portfolio .item').removeClass('hidden');
-        }else{
-            jQuery('.list_portfolio .item').each(function(){
-                if(customType === jQuery(this).attr('data-cat')) jQuery(this).removeClass('hidden'); else jQuery(this).addClass('hidden');
+            jQuery('.list_filter li').each(function(){
+                jQuery(this).removeClass("active");
             });
-        }
+            jQuery(nav_active).addClass("active");
 
+
+            var customType = jQuery(this).attr('data-cat');
+
+            if(customType==="all") {
+                jQuery(elements).each(function () {
+                    jQuery(this).appendTo( $container );
+                })
+            }else{
+                jQuery(elements).each(function () {
+                    if( customType === jQuery(this).attr('data-cat') ) {
+                        jQuery(this).appendTo( $container );
+                    }else {
+                        jQuery(this).detach();
+                    }
+                })
+            }
+
+        });
 
     });
 
