@@ -55,7 +55,9 @@ body
 .wrap
   min-height: calc(100vh - 427px)
 
-
+.hidden
+  display: none
+  visibility: hidden
 
 .home
   h1
@@ -68,90 +70,107 @@ body
     color: #3d3e3c
     font-size: 18px
     font-weight: 600
+
+  .filter .list_filter li
+    cursor: pointer
 //line-height: 48px
 
-.list_portfolio
-  margin: 0 -15px 100px
-  clear: both
-  .row
-    &:nth-child(2n+1)
-      .item
-        &:first-child
-          height: 570px
+.block_portfolio
+  margin-bottom: 100px
+  .list_portfolio
+    margin: 0 -15px 0
+    clear: both
 
-    &:nth-child(2n)
-      .item
-        width: 370px
-        height: 370px
-        &:first-child
+    //.row
+      &:nth-child(2n+1)
+        .item
+          &:first-child
+            height: 570px
+
+      &:nth-child(2n)
+        .item
+          width: 370px
           height: 370px
-          float: left
-    &:nth-child(3n)
-      .item
-        &:first-child
-          height: 570px
-          float: right
+          &:first-child
+            height: 370px
+            float: left
+      &:nth-child(3n)
+        .item
+          &:first-child
+            height: 570px
+            float: right
 
 
-  .item
-    display: inline-block
-    vertical-align: top
-    width: 570px
-    height: 270px
-    margin: 0 15px 30px
-    overflow: hidden
-    float: left
-    position: relative
+    .item:not(.hidden)
+      //display: inline-block
+      //vertical-align: top
 
-
-
-    .img-holder
-      height: 100%
+      width: 370px
+      height: 270px
+      margin: 0 15px 30px
       overflow: hidden
-      img
-        height: 100%
-        max-width: inherit
-        min-width: 100%
-    a
-      display: block
-      height: 100%
-      &:hover
-        .name
-          transition: opacity 0.35s
-          opacity: 1
+      float: left
+      position: relative
+      //display: none
 
-    .name
-      opacity: 0
-      background: rgba(0, 0, 0, 0.5)
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      transition: opacity 0.35s
-      display: table
-      //&:after
-        width: calc(100% - 60px)
-        height: calc(100% - 60px)
-        margin: 30px
-        border: 5px solid #fff
-        content: ""
+      &:nth-of-type(9n+1)
+        width: 770px
+        height: 570px
+      &:nth-of-type(9n+4),&:nth-of-type(9n+5),&:nth-of-type(9n+6)
+        height: 370px
+      &:nth-of-type(9n+7)
+        width: 770px
+        height: 570px
+        float: right
+
+
+      .img-holder
+        height: 100%
+        overflow: hidden
+        img
+          height: 100%
+          max-width: inherit
+          min-width: 100%
+      a
+        display: block
+        height: 100%
+        &:hover
+          .name
+            transition: opacity 0.35s
+            opacity: 1
+
+      .name
+        opacity: 0
+        background: rgba(0, 0, 0, 0.5)
+        width: 100%
+        height: 100%
         position: absolute
         top: 0
         left: 0
-        box-sizing: border-box
+        transition: opacity 0.35s
+        display: table
+        //&:after
+          width: calc(100% - 60px)
+          height: calc(100% - 60px)
+          margin: 30px
+          border: 5px solid #fff
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          box-sizing: border-box
 
 
 
-      .name-center
-        display: table-cell
-        vertical-align: middle
-        text-align: center
-        color: #fff
-        text-transform: uppercase
-        font-family: 'SourceSansPro', sans-serif
-        font-size: 60px
-        line-height: 1em
+        .name-center
+          display: table-cell
+          vertical-align: middle
+          text-align: center
+          color: #fff
+          text-transform: uppercase
+          font-family: 'SourceSansPro', sans-serif
+          font-size: 60px
+          line-height: 1em
 
   .more_item
     //border: 1px solid #b3b2b2
@@ -170,6 +189,8 @@ body
     &:hover
       transition: all 0.35s
       background: $main-color
+
+
 
 .filter
   //margin-bottom: 80px
@@ -191,11 +212,14 @@ body
     vertical-align: middle
 
     li
+
       height: 35px
       display: inline-block
       vertical-align: middle
       margin-right: 35px
-      cursor: pointer
+      //cursor: pointer
+      &:first-child
+        display: none
       &.active
         img
           filter: none

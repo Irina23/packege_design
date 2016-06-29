@@ -4,12 +4,27 @@ jQuery(document).ready(function() {
 
 
 
-    jQuery(window).load(function() {
+    /*jQuery(window).load(function() {
 
-
+        $('.list_portfolio').mixItUp({
+            controls: {
+                toggleFilterButtons: true
+            },
+            callbacks: {
+                onMixLoad: function(state, instance){
+                    instance._activeFilter = '';
+                }
+            },
+            load: {
+                filter: 'all'
+            },
+            animation: {
+                enable: false
+            }
+        });
 
        
-    });
+    });*/
 
 
 
@@ -40,7 +55,7 @@ jQuery(document).ready(function() {
 
 
     //filter portfolio
-    /*jQuery(".list_filter").on('click','li',function(){
+    jQuery(".home .list_filter").on('click','li',function(){
         var nav_active = jQuery(this);
 
         jQuery('.list_filter li').each(function(){
@@ -52,15 +67,15 @@ jQuery(document).ready(function() {
         var customType = jQuery(this).attr('data-cat');
 
         if(customType==="all") {
-            jQuery('.list_portfolio .item').show();
+            jQuery('.list_portfolio .item').removeClass('hidden');
         }else{
             jQuery('.list_portfolio .item').each(function(){
-                if(jQuery(this).attr('data-cat').indexOf(customType) < 0) jQuery(this).hide(); else jQuery(this).show();
+                if(customType === jQuery(this).attr('data-cat')) jQuery(this).removeClass('hidden'); else jQuery(this).addClass('hidden');
             });
         }
 
 
-    });*/
+    });
 
 
     //lang
