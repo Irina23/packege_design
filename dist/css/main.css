@@ -82,9 +82,6 @@ body {
   font-size: 18px;
   font-weight: 600; }
 
-.home .filter .list_filter li {
-  cursor: pointer; }
-
 .block_portfolio {
   margin-bottom: 100px; }
   .block_portfolio .list_portfolio {
@@ -192,7 +189,8 @@ body {
       height: 35px;
       display: inline-block;
       vertical-align: middle;
-      margin-right: 35px; }
+      margin-right: 35px;
+      cursor: pointer; }
       .filter .list_filter li:first-child {
         color: #3d3e3c;
         font-size: 30px;
@@ -202,6 +200,15 @@ body {
         vertical-align: middle;
         margin-right: 165px;
         font-weight: 600; }
+        .filter .list_filter li:first-child a {
+          color: #3d3e3c;
+          font-size: 30px;
+          line-height: 35px;
+          text-transform: uppercase;
+          display: block;
+          font-weight: 600; }
+          .filter .list_filter li:first-child a:hover {
+            text-decoration: none; }
       .filter .list_filter li.active img {
         -webkit-filter: none;
                 filter: none; }
