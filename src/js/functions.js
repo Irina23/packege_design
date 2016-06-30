@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
             elements = [];
         $container.find('.item').each(function () {
             elements.push(this);
-        })
+        });
 
         // console.log(elements)
 

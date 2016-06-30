@@ -149,7 +149,10 @@ body
         top: 0
         left: 0
         transition: opacity 0.35s
-        display: table
+        display: flex
+        flex-direction: row
+        text-align: center
+        //display: table
         z-index: 2
         //&:after
           width: calc(100% - 60px)
@@ -165,14 +168,20 @@ body
 
 
         &-center
-          display: table-cell
-          vertical-align: middle
+          //display: table-cell
+          //vertical-align: middle
           text-align: center
           color: #fff
           text-transform: uppercase
           font-family: 'SourceSansPro', sans-serif
           font-size: 60px
           line-height: 1em
+          display: table
+          width: 100%
+          height: 100%
+          > div
+            display: table-cell
+            vertical-align: middle
 
   .more_item
     //border: 1px solid #b3b2b2
@@ -658,6 +667,7 @@ footer
     .img-holder
       margin-top: 65px
       width: 100%
+      text-align: center
 
 
 
@@ -719,10 +729,25 @@ footer
 @media screen and (max-width: 959px)
   body
     min-width: 320px
-  .content, .about_page .wrap
+  .content
     width: 100%
     box-sizing: border-box
     padding: 0 30px
+  .about_page
+    .bg_about
+      height: 200px
+    .wrap
+      width: 100%
+      box-sizing: border-box
+      padding: 40px 20px
+      h1
+        font-size: 24px
+        margin-bottom: 30px
+      .img-holder
+        margin-top: 30px
+
+
+
   .block_portfolio .list_portfolio
     margin: 0
     .item
@@ -848,9 +873,27 @@ footer
       margin-top: 0
       float: none
       margin-bottom: 30px
+  .block_portfolio .list_portfolio .item
+    .name .name-center
+      font-size: 24px
+    a .name
+
+      transition: opacity 0.35s
+      opacity: 1
 
 
+  .portfolio_page .portfolio-info
+    padding: 30px
+    .block_text
+      width: 100%
+      margin-bottom: 30px
+    .share
+      float: none
 
+  .contact_page .contact
+    margin: 40px 0
+    input[type="text"], textarea
+      width: 260px
 
 @media screen and (max-width: 500px)
   .block_portfolio .list_portfolio .item
@@ -862,3 +905,6 @@ footer
       width: 100%
       height: 80vw
 
+  .contact_page .block-left
+    display: block
+    margin-right: 0
