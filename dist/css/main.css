@@ -739,7 +739,10 @@ footer {
             header .menu-block.mobile .lang-block ul li a {
               color: #000;
               -webkit-transition: all 0.35s;
-              transition: all 0.35s; }
+              transition: all 0.35s;
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 500; }
               header .menu-block.mobile .lang-block ul li a:hover {
                 color: #36d5c4;
                 -webkit-transition: all 0.35s;
