@@ -490,6 +490,9 @@ footer {
       line-height: 24px;
       text-align: left; }
 
+.contact_page .wrap {
+  margin-bottom: 40px; }
+
 .contact_page .block-left {
   display: inline-block;
   vertical-align: top;
@@ -526,13 +529,17 @@ footer {
 
 .contact_page .contact {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  max-width: calc(100% - 290px); }
+  .contact_page .contact .success_box {
+    margin-bottom: 20px; }
   .contact_page .contact h3 {
     color: #000000;
     font-size: 18px;
     font-weight: 600;
     line-height: 1em;
-    margin-bottom: 20px; }
+    width: 300px;
+    margin: 0 auto 20px; }
   .contact_page .contact > div.error input[type="text"], .contact_page .contact > div.error textarea {
     border-color: red; }
   .contact_page .contact input[type="text"] {
@@ -546,7 +553,8 @@ footer {
     font-weight: 500;
     line-height: 43px;
     text-align: left;
-    margin-bottom: 10px; }
+    margin: 0 auto 10px;
+    display: block; }
   .contact_page .contact textarea {
     border: 1px solid #e8e7e7;
     width: 300px;
@@ -558,7 +566,8 @@ footer {
     font-weight: 500;
     line-height: 1.3em;
     text-align: left;
-    margin-bottom: 20px; }
+    margin: 0 auto 20px;
+    display: block; }
   .contact_page .contact .submit {
     color: #989797;
     font-size: 16px;
@@ -769,10 +778,17 @@ footer {
       margin-bottom: 30px; }
     .portfolio_page .portfolio-info .share {
       float: none; }
+  .contact_page .contact input[type="text"], .contact_page .contact textarea, .contact_page .contact h3 {
+    width: 260px; } }
+
+@media screen and (max-width: 700px) {
   .contact_page .contact {
-    margin: 40px 0; }
-    .contact_page .contact input[type="text"], .contact_page .contact textarea {
-      width: 260px; } }
+    width: 100%;
+    display: block;
+    max-width: inherit; }
+  .contact_page .block-left {
+    margin-left: 0;
+    margin-bottom: 30px; } }
 
 @media screen and (max-width: 500px) {
   .block_portfolio .list_portfolio .item {
