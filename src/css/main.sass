@@ -925,6 +925,66 @@ footer
       width: 260px
 
 
+.error404
+  padding: 50px 0
+  .content
+    border: 5px solid $main-color
+    padding: 50px
+    text-align: center
+    min-height: calc(100vh - 100px)
+    .logo
+      width: 400px
+      margin: 0 auto 50px
+    .error404_text
+      color: red
+      font-size: 200px
+      line-height: 1em
+      margin-bottom: 50px
+      font-family: "OpenSans-Regular", sans-serif
+    .error_text
+
+      font-size: 36px
+      line-height: 1em
+      margin-bottom: 50px
+    .black_button
+      color: $main-color
+      font-size: 16px
+      font-weight: 600
+      line-height: 46px
+      display: block
+      //text-transform: uppercase
+      text-align: center
+      width: 200px
+      height: 50px
+      border: 2px solid $main-color
+      margin: auto
+      cursor: pointer
+      transition: all 0.35s
+      box-sizing: border-box
+      &:hover
+        transition: all 0.35s
+        color: #fff
+        background: $main-color
+        text-decoration: none
+
+
+@media screen and (max-width: 959px)
+  .error404
+    padding: 30px 20px
+    .content
+      padding: 30px 20px
+      min-height: calc(100vh - 60px)
+      border: 3px solid $main-color
+      .logo
+        width: 230px
+        margin-bottom: 40px
+      .error404_text
+        margin-bottom: 40px
+        font-size: 120px
+      .error_text
+        font-size: 18px
+        margin-bottom: 40px
+
 @media screen and (max-width: 700px)
   .contact_page .contact
     width: 100%
