@@ -180,7 +180,8 @@ body {
       background: #36d5c4; }
 
 .filter {
-  float: left;
+  clear: both;
+  display: block;
   margin-top: 30px; }
   .filter .list_filter {
     display: inline-block;
@@ -230,7 +231,7 @@ header {
   padding: 40px 0 80px; }
   header .logo {
     width: 700px;
-    float: left; }
+    display: inline-block; }
     header .logo a {
       display: block; }
   header .block-right {
@@ -703,7 +704,8 @@ footer {
       display: block;
       margin: auto;
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      float: left; }
     header .block-right {
       float: none;
       margin-top: 30px; }
