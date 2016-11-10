@@ -64,9 +64,7 @@ jQuery(document).ready(function() {
             }
             $('.home .list_filter li[data-cat="'+hrefVal+'"]').trigger("click");
         }
-        if (window.location.hash) {
-            clickFunction(window.location.hash);
-        }
+
 
 
         jQuery('.list_portfolio').each(function () {
@@ -92,6 +90,7 @@ jQuery(document).ready(function() {
                 var customType = jQuery(this).attr('data-cat');
 
                 if (customType === "all") {
+                    window.location.hash = "";
                     jQuery(elements).each(function () {
                         jQuery(this).appendTo($container);
                     })
@@ -108,6 +107,11 @@ jQuery(document).ready(function() {
             });
 
         });
+
+
+        if (window.location.hash) {
+            clickFunction(window.location.hash);
+        }
 
 
 
