@@ -10,8 +10,13 @@ html(lang="ru")
             include ./header2.jade
             .content.cf.wrap
                 .portfolio.cf
-                    .img-holder
-                        img(src="img/content/img1.jpg")
+
+                    .image-holder
+                        img.fake-img(src="img/content/img1.jpg" alt="")
+                        .img(style="background: url('img/content/img1.jpg') no-repeat;background-position: 50% 50%;background-repeat: no-repeat;background-size: cover;")
+
+
+
                     .portfolio-info.cf
                         .block_text
                             h1 Lorem ipsum
