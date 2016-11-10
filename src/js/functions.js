@@ -55,43 +55,62 @@ jQuery(document).ready(function() {
 
 
     //filter portfolio
-    jQuery('.list_portfolio').each(function () {
-
-        var $container = $(this),
-            elements = [];
-        $container.find('.item').each(function () {
-            elements.push(this);
-        });
-
-        // console.log(elements)
-
-        jQuery(".home .list_filter").on('click','li',function(){
-            var nav_active = jQuery(this);
-            if (nav_active.hasClass('active')) return;
-
-            jQuery('.list_filter li').each(function(){
-                jQuery(this).removeClass("active");
-            });
-            jQuery(nav_active).addClass("active");
-
-
-            var customType = jQuery(this).attr('data-cat');
-
-            if(customType==="all") {
-                jQuery(elements).each(function () {
-                    jQuery(this).appendTo( $container );
-                })
-            }else{
-                jQuery(elements).each(function () {
-                    if( customType === jQuery(this).attr('data-cat') ) {
-                        jQuery(this).appendTo( $container );
-                    }else {
-                        jQuery(this).detach();
-                    }
-                })
+    $(function() {
+        var clickFunction = function(hash) {
+            var hrefVal;
+            if (typeof hash === 'string') {
+                hash = hash.substring(1);
+                hrefVal = hash;
             }
+            $('.home .list_filter li[data-cat="'+hrefVal+'"]').trigger("click");
+        }
+        if (window.location.hash) {
+            clickFunction(window.location.hash);
+        }
+
+
+        jQuery('.list_portfolio').each(function () {
+
+            var $container = $(this),
+                elements = [];
+            $container.find('.item').each(function () {
+                elements.push(this);
+            });
+
+            // console.log(elements)
+
+            jQuery(".home .list_filter").on('click', 'li', function () {
+                var nav_active = jQuery(this);
+                if (nav_active.hasClass('active')) return;
+
+                jQuery('.list_filter li').each(function () {
+                    jQuery(this).removeClass("active");
+                });
+                jQuery(nav_active).addClass("active");
+
+
+                var customType = jQuery(this).attr('data-cat');
+
+                if (customType === "all") {
+                    jQuery(elements).each(function () {
+                        jQuery(this).appendTo($container);
+                    })
+                } else {
+                    jQuery(elements).each(function () {
+                        if (customType === jQuery(this).attr('data-cat')) {
+                            jQuery(this).appendTo($container);
+                        } else {
+                            jQuery(this).detach();
+                        }
+                    })
+                }
+
+            });
 
         });
+
+
+
 
     });
 
