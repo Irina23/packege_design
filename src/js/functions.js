@@ -55,6 +55,7 @@ jQuery(document).ready(function() {
 
 
     //filter portfolio
+
     $(function() {
         var clickFunction = function(hash) {
             var hrefVal;
@@ -62,12 +63,18 @@ jQuery(document).ready(function() {
                 hash = hash.substring(1);
                 hrefVal = hash;
             }
+
             $('.home .list_filter li[data-cat="'+hrefVal+'"]').trigger("click");
         }
 
 
 
+
+
+
+
         jQuery('.list_portfolio').each(function () {
+
 
             var $container = $(this),
                 elements = [];
@@ -75,11 +82,12 @@ jQuery(document).ready(function() {
                 elements.push(this);
             });
 
+
             // console.log(elements)
 
             jQuery(".home .list_filter").on('click', 'li', function () {
                 var nav_active = jQuery(this);
-                if (nav_active.hasClass('active')) return;
+                //if (nav_active.hasClass('active')) return;
 
                 jQuery('.list_filter li').each(function () {
                     jQuery(this).removeClass("active");
@@ -106,8 +114,45 @@ jQuery(document).ready(function() {
 
             });
 
-        });
 
+            $('.more_item').on('click', function(e){
+                //e.preventDefault();
+                var pageNumber = $(this).attr('data-page');
+
+                var pageNumberLast = $(this).attr('data-page-last');
+                var pageNumberNext = Number(pageNumber) + 1;
+                if (pageNumberNext == pageNumberLast){
+                    $('.more_item').hide();
+
+                }
+                console.log(pageNumberNext);
+                var filterActive =  $('.list_filter li.active').attr('data-cat');
+                console.log(filterActive);
+
+
+                $(this).attr('data-page', pageNumberNext);
+                $.ajax({
+                    type: "GET",
+                    url: "/portfolio",
+                    data: {
+                        'page': pageNumberNext
+                    },
+                    success: function(data){
+
+                        $container.append(data).find('.item').each(function () {
+                            elements.push(this);
+                        });
+
+
+                        $('.home .list_filter li[data-cat="'+filterActive+'"]').trigger('click');
+
+
+                    }
+                });
+
+            });
+
+        });
 
         if (window.location.hash) {
             clickFunction(window.location.hash);
@@ -147,6 +192,11 @@ jQuery(document).ready(function() {
             }
         }
     });
+
+
+
+
+
 
 
 });
