@@ -818,6 +818,8 @@ footer {
 
 .error404 {
   padding: 50px 0; }
+  .error404.no-border .content {
+    border: 0; }
   .error404 .content {
     border: 5px solid #36d5c4;
     padding: 50px;
@@ -836,6 +838,10 @@ footer {
       font-size: 36px;
       line-height: 1em;
       margin-bottom: 50px; }
+    .error404 .content h3 {
+      text-transform: uppercase;
+      color: #36d5c4;
+      font-size: 28px; }
     .error404 .content .black_button {
       color: #36d5c4;
       font-size: 16px;
