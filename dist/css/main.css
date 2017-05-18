@@ -361,8 +361,9 @@ header {
 
 footer {
   background: #f0eeee;
-  padding: 43px 0; }
+  padding: 55px 0; }
   footer .intertechcompany {
+    margin-top: 20px;
     display: inline-block;
     float: right; }
   footer .logo {
@@ -457,7 +458,8 @@ footer {
     font-weight: 400;
     line-height: 1em;
     margin-top: 30px;
-    text-align: left; }
+    text-align: left;
+    display: inline-block; }
 
 .portfolio_page .portfolio {
   margin-bottom: 70px; }
