@@ -361,7 +361,10 @@ header {
 
 footer {
   background: #f0eeee;
-  padding: 50px 0 60px; }
+  padding: 43px 0; }
+  footer .intertechcompany {
+    display: inline-block;
+    float: right; }
   footer .logo {
     width: 200px;
     display: inline-block;
@@ -446,7 +449,7 @@ footer {
         footer .item_contact li a:last-child {
           margin-bottom: 0; }
   footer .copyright {
-    display: block;
+    width: calc(100% - 100px);
     clear: both;
     color: #3d3e3c;
     font-family: "OpenSans-Regular", sans-serif;
@@ -709,7 +712,12 @@ footer {
         width: calc(50% - 20px);
         height: 25vw; }
   footer {
-    padding: 50px 0; }
+    padding: 30px 0; }
+    footer .intertechcompany {
+      float: none;
+      width: 100px;
+      margin: auto;
+      display: block; }
     footer .content > div, footer .content > ul {
       display: block;
       margin: 0 auto 30px;
