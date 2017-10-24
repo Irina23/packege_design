@@ -149,7 +149,6 @@ body {
         display: block;
         height: 100%; }
         .block_portfolio .list_portfolio .item a:hover .name {
-          -webkit-transition: opacity 0.35s;
           transition: opacity 0.35s;
           opacity: 1; }
       .block_portfolio .list_portfolio .item .name {
@@ -160,7 +159,6 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        -webkit-transition: opacity 0.35s;
         transition: opacity 0.35s;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -196,10 +194,8 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
-    -webkit-transition: all 0.35s;
     transition: all 0.35s; }
     .block_portfolio .more_item:hover {
-      -webkit-transition: all 0.35s;
       transition: all 0.35s;
       background: #36d5c4; }
 
@@ -240,7 +236,6 @@ body {
       .filter .list_filter li a:hover img {
         -webkit-filter: none;
                 filter: none;
-        -webkit-transition: all 0.35s;
         transition: all 0.35s; }
       .filter .list_filter li:last-child {
         margin-right: 0; }
@@ -248,7 +243,6 @@ body {
         height: 100%;
         -webkit-filter: brightness(0.1);
                 filter: brightness(0.1);
-        -webkit-transition: all 0.35s;
         transition: all 0.35s; }
 
 header {
@@ -302,10 +296,8 @@ header {
           line-height: 14px;
           text-transform: uppercase;
           color: #000;
-          -webkit-transition: all 0.35s;
           transition: all 0.35s; }
           header .lang-block .lang-list li a:hover {
-            -webkit-transition: all 0.35s;
             transition: all 0.35s;
             color: #36d5c4;
             text-decoration: none; }
@@ -350,11 +342,9 @@ header {
           font-weight: 500;
           line-height: 14px;
           text-transform: uppercase;
-          -webkit-transition: all 0.35s;
           transition: all 0.35s;
           color: #000; }
           header .menu-block .nav li a:hover {
-            -webkit-transition: all 0.35s;
             transition: all 0.35s;
             color: #36d5c4;
             text-decoration: none; }
@@ -405,7 +395,6 @@ footer {
         color: #fff;
         text-align: center;
         line-height: 30px;
-        -webkit-transition: all 0.35s;
         transition: all 0.35s; }
         footer .social li a i {
           line-height: 23px;
@@ -413,7 +402,6 @@ footer {
           vertical-align: top; }
         footer .social li a:hover {
           background: #36d5c4;
-          -webkit-transition: all 0.35s;
           transition: all 0.35s; }
   footer .item_contact {
     display: inline-block;
@@ -434,7 +422,6 @@ footer {
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 20px;
-        -webkit-transition: all 0.35s;
         transition: all 0.35s;
         display: inline-block;
         vertical-align: top;
@@ -445,7 +432,6 @@ footer {
         footer .item_contact li a:hover {
           color: #36d5c4;
           text-decoration: none;
-          -webkit-transition: all 0.35s;
           transition: all 0.35s; }
         footer .item_contact li a:last-child {
           margin-bottom: 0; }
@@ -488,11 +474,26 @@ footer {
       line-height: 1em;
       text-transform: uppercase;
       margin-bottom: 20px; }
-    .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__icon {
+    .portfolio_page .portfolio-info .share .likely__widget {
+      line-height: 30px;
+      color: #fff;
       width: 30px;
-      height: 30px; }
-    .portfolio_page .portfolio-info .share .ya-share2__badge {
-      border-radius: 30px; }
+      height: 30px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-right: 20px;
+      background: #afb0b0;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.35s;
+      font-size: 17px; }
+      .portfolio_page .portfolio-info .share .likely__widget:hover {
+        transition: all 0.35s;
+        background: #36d5c4; }
+      .portfolio_page .portfolio-info .share .likely__widget:last-child {
+        margin-right: 0; }
+    .portfolio_page .portfolio-info .share .likely__icon, .portfolio_page .portfolio-info .share .likely__counter {
+      display: none; }
     .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__item {
       margin: 0 20px 0 0; }
       .portfolio_page .portfolio-info .share .ya-share2__container_size_m .ya-share2__item:last-child {
@@ -500,11 +501,9 @@ footer {
     .portfolio_page .portfolio-info .share .ya-share2__item_service_facebook .ya-share2__badge,
     .portfolio_page .portfolio-info .share .ya-share2__item_service_pinterest .ya-share2__badge {
       background: #afb0b0;
-      -webkit-transition: all 0.35s;
       transition: all 0.35s; }
       .portfolio_page .portfolio-info .share .ya-share2__item_service_facebook .ya-share2__badge:hover,
       .portfolio_page .portfolio-info .share .ya-share2__item_service_pinterest .ya-share2__badge:hover {
-        -webkit-transition: all 0.35s;
         transition: all 0.35s;
         background: #36d5c4; }
   .portfolio_page .portfolio-info .block_text {
@@ -555,10 +554,8 @@ footer {
       font-size: 14px;
       font-weight: 400;
       line-height: 1em;
-      -webkit-transition: all 0.35s;
       transition: all 0.35s; }
       .contact_page .block-left p a:hover {
-        -webkit-transition: all 0.35s;
         transition: all 0.35s;
         color: #36d5c4;
         text-decoration: none; }
@@ -615,11 +612,9 @@ footer {
     border: 2px solid #bfbebe;
     margin: auto;
     cursor: pointer;
-    -webkit-transition: all 0.35s;
     transition: all 0.35s;
     box-sizing: border-box; }
     .contact_page .contact .submit:hover {
-      -webkit-transition: all 0.35s;
       transition: all 0.35s;
       background: #36d5c4;
       border-color: #36d5c4;
@@ -778,14 +773,12 @@ footer {
             margin: 0 10px; }
             header .menu-block.mobile .lang-block ul li a {
               color: #000;
-              -webkit-transition: all 0.35s;
               transition: all 0.35s;
               text-transform: uppercase;
               font-size: 14px;
               font-weight: 500; }
               header .menu-block.mobile .lang-block ul li a:hover {
                 color: #36d5c4;
-                -webkit-transition: all 0.35s;
                 transition: all 0.35s;
                 text-decoration: none; }
             header .menu-block.mobile .lang-block ul li.active {
@@ -813,7 +806,6 @@ footer {
   .block_portfolio .list_portfolio .item .name .name-center {
     font-size: 24px; }
   .block_portfolio .list_portfolio .item a .name {
-    -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
     opacity: 1; }
   .portfolio_page .portfolio-info {
@@ -864,11 +856,9 @@ footer {
       border: 2px solid #36d5c4;
       margin: auto;
       cursor: pointer;
-      -webkit-transition: all 0.35s;
       transition: all 0.35s;
       box-sizing: border-box; }
       .error404 .content .black_button:hover {
-        -webkit-transition: all 0.35s;
         transition: all 0.35s;
         color: #fff;
         background: #36d5c4;
