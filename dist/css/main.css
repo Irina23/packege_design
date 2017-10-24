@@ -127,11 +127,11 @@ body {
         width: 770px;
         height: 570px;
         float: right; }
-      .block_portfolio .list_portfolio .item .img-holder {
+      .block_portfolio .list_portfolio .item .image-holder {
         height: 100%;
         overflow: hidden;
         position: relative; }
-        .block_portfolio .list_portfolio .item .img-holder .img {
+        .block_portfolio .list_portfolio .item .image-holder .img {
           background-size: cover;
           background-position: top center;
           position: absolute;
@@ -139,7 +139,7 @@ body {
           left: 0;
           height: 100%;
           width: 100%; }
-        .block_portfolio .list_portfolio .item .img-holder img {
+        .block_portfolio .list_portfolio .item .image-holder img {
           height: 100%;
           max-width: inherit;
           min-width: 100%;
